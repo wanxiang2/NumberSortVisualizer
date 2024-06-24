@@ -2,7 +2,6 @@
 .box {
     width: 100px;
     height: 100px;
-    outline: none;
     outline: 5px solid black;
     display: inline-block;
     text-align: center;
@@ -27,3 +26,19 @@
     margin-top: 45px;
     background-color: green;
 }
+  
+.color-change {
+    outline: 5px solid darkred;
+}
+
+@keyframes move-up {
+    100% {
+        transform: translate(0, -300px);
+    }
+}
+
+.move-up {
+    animation: move-up 0.4s forwards ease-out;
+}
+
+/*Try to ease out the move up*/

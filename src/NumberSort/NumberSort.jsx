@@ -25,24 +25,29 @@ function NumberSort() {
         setInputValues(newInputValues);
     };
 
+    const [colorChange, setColorChange] = useState(false);
+    const [moveUp, setMoveUp] = useState(false);
+
     // This calls the MergeSort function in the MergeSort.js file to sort the array of user input
     // numbers. It then stores this sorted array in inputValues.
     const clickHandler = () => {
-        let sortedArray = mergeSort(inputValues);
-        setInputValues(sortedArray);
+        //let sortedArray = mergeSort(inputValues);
+        //setInputValues(sortedArray);
+        setColorChange(true);
+        setTimeout(() => {
+            setMoveUp(true);
+        }, 250);
     }
 
     return (
         <div className="container">
-            <div className="boxes">
+            <div className={`boxes ${moveUp ? 'move-up' : ''}`}>
                 {numBoxes.map((myBox, boxNumber) => (
-                    <input key={boxNumber} className="box" type="number" onChange={(event) => inputChangeHandler(boxNumber, event)}></input>
+                    <input key={boxNumber} className={`box ${colorChange ? 'color-change' : ''}`} type="number" onChange={(event) => inputChangeHandler(boxNumber, event)}></input>
                 ))}
             </div>
 
             <button className="button" onClick={clickHandler}>Sort</button>
-
-            <p>{JSON.stringify(inputValues)}</p> 
            
         </div>
          
