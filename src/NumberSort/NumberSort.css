@@ -25,6 +25,8 @@
     height: 50px;
     margin-top: 45px;
     background-color: green;
+
+    transition: opacity 105ms ease-out;
 }
   
 .color-change {
@@ -39,6 +41,10 @@
 
 .move-up {
     animation: move-up 0.4s forwards ease-out;
+}
+
+.button-fade {
+    opacity: 0;
 }
 
 /*Try to ease out the move up*/

@@ -27,6 +27,7 @@ function NumberSort() {
 
     const [colorChange, setColorChange] = useState(false);
     const [moveUp, setMoveUp] = useState(false);
+    const [buttonFade, setButtonFade] = useState(false);
 
     // This calls the MergeSort function in the MergeSort.js file to sort the array of user input
     // numbers. It then stores this sorted array in inputValues.
@@ -34,6 +35,7 @@ function NumberSort() {
         //let sortedArray = mergeSort(inputValues);
         //setInputValues(sortedArray);
         setColorChange(true);
+        setButtonFade(true);
         setTimeout(() => {
             setMoveUp(true);
         }, 250);
@@ -47,7 +49,7 @@ function NumberSort() {
                 ))}
             </div>
 
-            <button className="button" onClick={clickHandler}>Sort</button>
+            <button className={`button ${buttonFade ? 'button-fade' : ''}`} onClick={clickHandler}>Sort</button>
            
         </div>
          
