@@ -1,3 +1,4 @@
+/* These are to style the initial boxes and the button on the screen. */
 .box {
     width: 100px;
     height: 100px;
@@ -23,7 +24,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: visible; /* Allow overflow */
+    overflow: visible; 
     top: 30px;
 }
 
@@ -35,6 +36,7 @@
     transition: opacity 105ms ease-out;
 }
 
+/* These are to style and handle the starting animation when the button is first clicked.*/
 .color-change {
     outline: 5px solid darkred;
 }
@@ -54,7 +56,7 @@
 }
 
 
-
+/* These are to style and handle the animation for the divide stage of the Merge Sort animation.*/
 .box-clone {
     width: 100px;
     height: 100px;
@@ -118,67 +120,4 @@
 
 
 
-
-/* These are to style the initial boxes and the button on the screen. */
-/*.box {
-    width: 100px;
-    height: 100px;
-    outline: 5px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    caret-color: transparent;
-    border-radius: 5px;
-    transition: all 0.5s  ease-out;
-    background-color: white;
-}
-
-.boxes {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    transition: transform 0.5s ease-out;
-}
-
-.main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.button {
-    width: 150px;
-    height: 50px;
-    margin-top: 45px;
-    background-color: green;
-
-    transition: opacity 105ms ease-out;
-}
-  
-.color-change {
-    outline: 5px solid darkred;
-}
-
-@keyframes move-up {
-    100% {
-        transform: translate(0, -300px);
-    }
-}
-
-.move-up {
-    animation: move-up 0.4s forwards ease-out;
-}
-
-.button-fade {
-    opacity: 0;
-}
-
-.merge-sort-container {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    margin-top: 20px; /* This creates the downward movement for each division */
-/*    transition: all 0.5s ease-out;
-}
 
