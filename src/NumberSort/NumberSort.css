@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: visible; 
+    overflow: visible; /* Allow overflow */
     top: 30px;
 }
 
@@ -54,7 +54,6 @@
 .button-fade {
     opacity: 0;
 }
-
 
 /* These are to style and handle the animation for the divide stage of the Merge Sort animation.*/
 .box-clone {
@@ -115,6 +114,19 @@
         transform: translateX(calc(60% + 150px)) translateY(150px); /* Adjust translation values */
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
